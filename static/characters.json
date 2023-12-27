@@ -1,0 +1,151 @@
+{
+	"king-of-the-goballs": {
+		"id": "king-of-the-goballs",
+		"name": "King of the Gobballs",
+		"class": "Osamodas",
+		"type": "hero",
+		"level": 3,
+		"initiative": 2,
+		"hp": 10,
+		"ap": 7,
+		"mp": 3,
+		"powers": ["armor", "lock"],
+		"spells": [
+			{
+				"id": "gobbolob",
+				"name": "Gobbolob",
+				"castLimit": "infinite",
+				"cost": "3",
+				"range": {
+					"type": "melee"
+				},
+				"damage": {
+					"amount": 1,
+					"element": "earth"
+				},
+				"effect": "Inflicts +2 Earth damage when a Gobball is adjacent to the target of this spell"
+			},
+			{
+				"id": "summon-gobball-1",
+				"name": "Summon Gobball (1)",
+				"castLimit": "infinite",
+				"cost": "4",
+				"range": {
+					"type": "melee"
+				},
+				"damage": {
+					"amount": 0,
+					"element": "none"
+				},
+				"effect": "Summons a Gobball on target empty cell"
+			}
+		],
+		"summons": {
+			"gobball": {
+				"id": "gobball",
+				"name": "Gobball",
+				"class": "summon",
+				"type": "pet",
+				"maxInPlay": 1,
+				"hp": 3,
+				"ap": 5,
+				"mp": 3,
+				"powers": [],
+				"spells": [
+					{
+						"id": "bite",
+						"name": "Bite",
+						"castLimit": "infinite",
+						"cost": "4",
+						"range": {
+							"type": "melee"
+						},
+						"damage": {
+							"amount": 1,
+							"element": "earth"
+						},
+						"effect": ""
+					}
+				]
+			}
+		}
+	},
+	"queen-of-the-tofus": {
+		"id": "queen-of-the-tofus",
+		"name": "Queen of the Tofus",
+		"class": "Osamodas",
+		"type": "hero",
+		"level": 3,
+		"initiative": 8,
+		"hp": 8,
+		"ap": 6,
+		"mp": 4,
+		"powers": ["critical-hit", "dodge"],
+		"spells": [
+			{
+				"id": "dan-to-fu",
+				"name": "Dan To Fu",
+				"castLimit": "infinite",
+				"cost": "3",
+				"range": {
+					"type": "ranged",
+					"properties": {
+						"rangeMin": 1,
+						"rangeMax": 3,
+						"linear": false,
+						"extendable": true,
+						"lineOfSight": true
+					}
+				},
+				"damage": {
+					"amount": 1,
+					"element": "air"
+				},
+				"effect": "Inflicts +1 Air damage per Tofu adjacent to the target"
+			},
+			{
+				"id": "summon-tofu-3",
+				"name": "Summon Tofu (3)",
+				"castLimit": "infinite",
+				"cost": "3",
+				"range": {
+					"type": "close-combat"
+				},
+				"damage": {
+					"amount": 0,
+					"element": "none"
+				},
+				"effect": "Summons a Tofu on target empty cell"
+			}
+		],
+		"summons": {
+			"tofu": {
+				"id": "tofu",
+				"name": "Tofu",
+				"class": "summon",
+				"type": "pet",
+				"maxInPlay": 3,
+				"hp": 1,
+				"ap": 4,
+				"mp": 5,
+				"powers": ["itty-bitty"],
+				"spells": [
+					{
+						"id": "kiss",
+						"name": "Kiss",
+						"castLimit": "infinite",
+						"cost": "4",
+						"range": {
+							"type": "melee"
+						},
+						"damage": {
+							"amount": 0,
+							"element": "air"
+						},
+						"effect": ""
+					}
+				]
+			}
+		}
+	}
+}
